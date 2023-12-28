@@ -16,8 +16,8 @@ shutil.rmtree("./output")
 os.mkdir("./temp")
 os.mkdir("./output")
 model = tf.keras.models.load_model('./tablenet')
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Biswajit_Das1\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
-
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Biswajit_Das1\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/local/share/tessdata/'
 # given predicted boxes approximate the predicted rectangles
 
 

@@ -1,8 +1,6 @@
 from flask import *
 from model_methods import predict_and_extract
 
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Biswajit_Das1\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
-
 app = Flask(__name__)
 
 
