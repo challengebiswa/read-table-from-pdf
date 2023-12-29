@@ -11,11 +11,11 @@ import tensorflow as tf
 import pytesseract
 import shutil
 
-shutil.rmtree("./temp")
-shutil.rmtree("./output")
-os.mkdir("./temp")
-os.mkdir("./output")
-model = tf.keras.models.load_model('./tablenet')
+current_working_directory = os.getcwd()
+os.mkdir(current_working_directory+"/temp")
+os.mkdir(current_working_directory+"/output")
+
+model = tf.keras.models.load_model(current_working_directory+'/tablenet')
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Biswajit_Das1\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 pytesseract.pytesseract.tesseract_cmd = r'/usr/local/share/tessdata/'
 # given predicted boxes approximate the predicted rectangles
